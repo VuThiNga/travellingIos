@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SuggestFriendCollectionViewCell" customModule="TravellingProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="255" height="243"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="255" height="243"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="Y7T-8C-qF7">
+                        <rect key="frame" x="0.0" y="0.0" width="255" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="sv8-bA-3fs"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hồ Thị Thanh Thảo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atK-Ic-fvw">
+                        <rect key="frame" x="8" y="168" width="126.5" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đại học Bôn ba" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYe-xB-4u7">
+                        <rect key="frame" x="8" y="185" width="83" height="14"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="aEe-OX-Mdv">
+                        <rect key="frame" x="8" y="207" width="239" height="28"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fic-Bv-1sW">
+                                <rect key="frame" x="0.0" y="1" width="124" height="26"/>
+                                <color key="backgroundColor" red="0.039400972479999997" green="0.40417015099999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Add friend">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxY-RF-iBY">
+                                <rect key="frame" x="140" y="1" width="99" height="26"/>
+                                <color key="backgroundColor" red="1" green="0.78924009309999998" blue="0.80460073629999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Follow">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAdd:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Qi3-C8-uWS"/>
+                                    <action selector="btnFollow:" destination="gTV-IL-0wX" eventType="touchUpInside" id="S3e-XZ-yqI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="aEe-OX-Mdv" secondAttribute="bottom" constant="8" id="8wq-X1-I8T"/>
+                <constraint firstItem="eYe-xB-4u7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="GPi-z0-pku"/>
+                <constraint firstItem="aEe-OX-Mdv" firstAttribute="top" secondItem="eYe-xB-4u7" secondAttribute="bottom" constant="8" id="Jiz-ev-nXn"/>
+                <constraint firstItem="atK-Ic-fvw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="JoD-fr-JBL"/>
+                <constraint firstItem="Y7T-8C-qF7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Pxf-vm-noY"/>
+                <constraint firstAttribute="trailing" secondItem="aEe-OX-Mdv" secondAttribute="trailing" constant="8" id="QE9-dk-PRl"/>
+                <constraint firstItem="atK-Ic-fvw" firstAttribute="top" secondItem="Y7T-8C-qF7" secondAttribute="bottom" constant="8" id="a6s-NY-dLq"/>
+                <constraint firstItem="Y7T-8C-qF7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lLW-gI-G1T"/>
+                <constraint firstItem="eYe-xB-4u7" firstAttribute="top" secondItem="atK-Ic-fvw" secondAttribute="bottom" id="mIn-GS-uXh"/>
+                <constraint firstAttribute="trailing" secondItem="Y7T-8C-qF7" secondAttribute="trailing" id="o3Q-1n-eON"/>
+                <constraint firstItem="aEe-OX-Mdv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="q1u-pd-dda"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="255" height="243"/>
+            <connections>
+                <outlet property="btnAddFr" destination="Fic-Bv-1sW" id="CKJ-LP-9L3"/>
+                <outlet property="btnFollow" destination="DxY-RF-iBY" id="og9-Ti-TRL"/>
+                <outlet property="imgAvatar" destination="Y7T-8C-qF7" id="0a0-mk-FP5"/>
+                <outlet property="lblName" destination="eYe-xB-4u7" id="P27-5d-re7"/>
+                <outlet property="lblUN" destination="atK-Ic-fvw" id="yK3-2P-Rg6"/>
+            </connections>
+            <point key="canvasLocation" x="120.9375" y="49.119718309859152"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="img" width="312.75" height="391.5"/>
+    </resources>
+</document>

@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="btnFind" destination="U4A-Dt-Egi" id="7gc-Qc-VNF"/>
                 <outlet property="btnPost" destination="gcZ-9o-hgn" id="YaC-wN-F0n"/>
+                <outlet property="cllFriend" destination="vbj-Mu-LfU" id="YWw-pq-aqR"/>
                 <outlet property="tblPlace" destination="qob-EL-Qxh" id="9Fk-Tc-ZU6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -76,8 +77,21 @@
                                         </stackView>
                                     </subviews>
                                 </stackView>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qob-EL-Qxh">
-                                    <rect key="frame" x="0.0" y="98" width="320" height="450"/>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vbj-Mu-LfU">
+                                    <rect key="frame" x="16" y="98" width="288" height="200"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="7vC-Tb-C4p"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SUx-i7-Lps">
+                                        <size key="itemSize" width="50" height="50"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qob-EL-Qxh">
+                                    <rect key="frame" x="0.0" y="318" width="320" height="230"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <outlet property="dataSource" destination="-1" id="bt7-QZ-lcu"/>
@@ -88,12 +102,15 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="6Zb-az-VQz" firstAttribute="top" secondItem="UBH-HY-Stj" secondAttribute="top" constant="16" id="7Zp-JS-ITi"/>
+                                <constraint firstItem="qob-EL-Qxh" firstAttribute="top" secondItem="vbj-Mu-LfU" secondAttribute="bottom" constant="20" id="MQo-zL-RHU"/>
                                 <constraint firstAttribute="trailing" secondItem="qob-EL-Qxh" secondAttribute="trailing" id="OLl-P0-Kaa"/>
                                 <constraint firstItem="6Zb-az-VQz" firstAttribute="leading" secondItem="UBH-HY-Stj" secondAttribute="leading" constant="16" id="Q31-1I-hSA"/>
                                 <constraint firstAttribute="bottom" secondItem="qob-EL-Qxh" secondAttribute="bottom" id="cuT-f0-zJo"/>
                                 <constraint firstAttribute="trailing" secondItem="6Zb-az-VQz" secondAttribute="trailing" constant="16" id="d3Q-zx-A6e"/>
+                                <constraint firstAttribute="trailing" secondItem="vbj-Mu-LfU" secondAttribute="trailing" constant="16" id="fnS-ri-3Qs"/>
                                 <constraint firstItem="qob-EL-Qxh" firstAttribute="leading" secondItem="UBH-HY-Stj" secondAttribute="leading" id="kra-uF-npt"/>
-                                <constraint firstItem="qob-EL-Qxh" firstAttribute="top" secondItem="6Zb-az-VQz" secondAttribute="bottom" constant="20" id="uaB-8q-6mG"/>
+                                <constraint firstItem="vbj-Mu-LfU" firstAttribute="leading" secondItem="UBH-HY-Stj" secondAttribute="leading" constant="16" id="qEW-cB-9lX"/>
+                                <constraint firstItem="vbj-Mu-LfU" firstAttribute="top" secondItem="6Zb-az-VQz" secondAttribute="bottom" constant="20" id="u0b-kY-w0k"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -103,7 +120,7 @@
                         <constraint firstItem="UBH-HY-Stj" firstAttribute="top" secondItem="XfJ-5V-hDe" secondAttribute="top" id="CSf-Rf-sVt"/>
                         <constraint firstItem="UBH-HY-Stj" firstAttribute="width" secondItem="XfJ-5V-hDe" secondAttribute="width" id="F7P-Hc-KRH"/>
                         <constraint firstItem="UBH-HY-Stj" firstAttribute="leading" secondItem="XfJ-5V-hDe" secondAttribute="leading" id="Gf2-MX-PnQ"/>
-                        <constraint firstAttribute="bottom" secondItem="UBH-HY-Stj" secondAttribute="bottom" id="Lpg-Kp-nmv"/>
+                        <constraint firstAttribute="bottom" secondItem="UBH-HY-Stj" secondAttribute="bottom" id="d7D-DV-Phk"/>
                     </constraints>
                 </scrollView>
             </subviews>
